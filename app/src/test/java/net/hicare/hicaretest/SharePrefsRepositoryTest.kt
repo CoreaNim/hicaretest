@@ -8,7 +8,7 @@ import io.mockk.impl.annotations.RelaxedMockK
 import io.mockk.mockk
 import junit.framework.TestCase
 import kotlinx.coroutines.ExperimentalCoroutinesApi
-import net.hicare.hicaretest.domain.repository.SharePrefsRepository
+import net.hicare.core.domain.repository.SharePrefsRepository
 import org.junit.Test
 
 @ExperimentalCoroutinesApi
@@ -19,7 +19,7 @@ class SharePrefsRepositoryTest : TestCase() {
     @RelaxedMockK
     lateinit var sharedPrefsEditor: SharedPreferences.Editor
 
-    private lateinit var sharePrefsRepo: SharePrefsRepository
+    private lateinit var sharePrefsRepo: net.hicare.core.domain.repository.SharePrefsRepository
 
     public override fun setUp() {
         super.setUp()
@@ -29,7 +29,7 @@ class SharePrefsRepositoryTest : TestCase() {
         coEvery { sharedPrefs.edit() } returns sharedPrefsEditor
         coEvery { sharedPrefsEditor.putString(any(), any()) } returns sharedPrefsEditor
 
-        sharePrefsRepo = SharePrefsRepository(sharedPrefs)
+        sharePrefsRepo = net.hicare.core.domain.repository.SharePrefsRepository(sharedPrefs)
     }
 
     @Test

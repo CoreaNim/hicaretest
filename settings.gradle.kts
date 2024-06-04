@@ -21,4 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "hicaretest"
 include(":app")
- 
+include(":core")
