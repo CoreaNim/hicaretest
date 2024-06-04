@@ -1,4 +1,4 @@
-package net.hicare.core.di
+package net.hicare.core.datastore
 
 import android.content.Context
 import android.content.SharedPreferences
@@ -7,7 +7,7 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
-import net.hicare.core.domain.repository.SharePrefsRepository
+import net.hicare.core.data.repository.SharePrefsRepository
 import javax.inject.Named
 import javax.inject.Singleton
 

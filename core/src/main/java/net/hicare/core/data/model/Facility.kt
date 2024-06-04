@@ -1,4 +1,4 @@
-package net.hicare.core.domain.model
+package net.hicare.core.data.model
 
 data class Facilities(var statusCode: Int, var message: String, var data: List<Facility>)
 

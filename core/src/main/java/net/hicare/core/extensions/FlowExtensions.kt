@@ -7,7 +7,7 @@ import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
-import net.hicare.core.common.ResultWrapper
+import net.hicare.core.network.util.ResultWrapper
 
 typealias ErrorHandler = (exception: Throwable?) -> Unit
 typealias SuccessHandler<T> = (value: T) -> Unit

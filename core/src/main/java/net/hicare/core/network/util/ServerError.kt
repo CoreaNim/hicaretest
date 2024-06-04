@@ -1,4 +1,4 @@
-package net.hicare.core.common
+package net.hicare.core.network.util
 
 import com.google.gson.annotations.SerializedName
 

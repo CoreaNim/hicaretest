@@ -1,4 +1,4 @@
-package net.hicare.core.di
+package net.hicare.core.network.di
 
 import dagger.Module
 import dagger.Provides

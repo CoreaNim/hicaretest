@@ -34,12 +34,13 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import net.hicare.core.data.model.Facility
 import net.hicare.hicaretest.R
 
 @OptIn(ExperimentalMaterialApi::class)
 @Composable
 fun RegisterFacilityForm(
-    facilities: List<net.hicare.core.domain.model.Facility>,
+    facilities: List<Facility>,
     onPopupSnackBar: () -> Unit,
     onSaveFacilityName: (String) -> Unit
 ) {

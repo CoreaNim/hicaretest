@@ -1,4 +1,4 @@
-package net.hicare.core.domain.repository
+package net.hicare.core.data.repository
 
 import android.content.SharedPreferences
 import net.hicare.core.extensions.string

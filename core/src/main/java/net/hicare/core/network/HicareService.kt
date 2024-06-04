@@ -1,6 +1,6 @@
 package net.hicare.core.network
 
-import net.hicare.core.domain.model.Facilities
+import net.hicare.core.data.model.Facilities
 import retrofit2.http.GET
 
 interface HicareService {

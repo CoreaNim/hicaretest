@@ -1,6 +1,6 @@
-package net.hicare.core.usecase
+package net.hicare.core.domain
 
-import net.hicare.core.domain.repository.SharePrefsRepository
+import net.hicare.core.data.repository.SharePrefsRepository
 import javax.inject.Inject
 
 class SharePrefsUseCase @Inject constructor(private val sharePrefsRepository: SharePrefsRepository) {

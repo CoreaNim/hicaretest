@@ -1,8 +1,8 @@
-package net.hicare.core.domain.repository
+package net.hicare.core.data.repository
 
-import net.hicare.core.common.ResultWrapper
+import net.hicare.core.network.util.ResultWrapper
 import net.hicare.core.network.HicareService
-import net.hicare.core.domain.model.Facilities
+import net.hicare.core.data.model.Facilities
 import net.hicare.core.extensions.safeApiCall
 import javax.inject.Inject
 

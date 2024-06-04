@@ -6,9 +6,9 @@ import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
-import net.hicare.core.common.DtoErrorResponse
-import net.hicare.core.common.ResultWrapper
-import net.hicare.core.common.toDomainModel
+import net.hicare.core.network.util.DtoErrorResponse
+import net.hicare.core.network.util.ResultWrapper
+import net.hicare.core.network.util.toDomainModel
 import retrofit2.HttpException
 import timber.log.Timber
 import java.io.IOException

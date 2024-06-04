@@ -20,6 +20,8 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
+import net.hicare.core.data.model.Facility
+import net.hicare.core.network.util.ResultWrapper
 import net.hicare.hicaretest.R
 
 @SuppressLint("UnusedMaterialScaffoldPaddingParameter")
@@ -45,7 +47,7 @@ fun RegisterContent(scaffoldState: ScaffoldState) {
     val scope = rememberCoroutineScope()
     val context = LocalContext.current
     val facilityViewModel = hiltViewModel<FacilityViewModel>()
-    var facilities = emptyList<net.hicare.core.domain.model.Facility>()
+    var facilities = emptyList<Facility>()
 
     LaunchedEffect("findAllFacilities") {
         facilityViewModel.findAllFacilities()
@@ -53,15 +55,15 @@ fun RegisterContent(scaffoldState: ScaffoldState) {
 
     val facilityName = facilityViewModel.facilityName.collectAsState()
     when (val response = facilityViewModel.facilitiesResult.collectAsState().value) {
-        is net.hicare.core.common.ResultWrapper.Success -> {
+        is ResultWrapper.Success -> {
             facilities = response.value.data
         }
 
-        is net.hicare.core.common.ResultWrapper.AppServerError -> {
+        is ResultWrapper.AppServerError -> {
             popupSnackBar(scope, scaffoldState, response.serverError.message)
         }
 
-        is net.hicare.core.common.ResultWrapper.GenericError, net.hicare.core.common.ResultWrapper.NetworkError -> {
+        is ResultWrapper.GenericError, ResultWrapper.NetworkError -> {
             popupSnackBar(scope, scaffoldState, context.getString(R.string.api_call_failed))
         }
 
